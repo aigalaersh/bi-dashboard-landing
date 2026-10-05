@@ -188,14 +188,35 @@ footer{color:var(--muted)}
   html{scroll-behavior:auto}
   *,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
 }
+/* Скриншот блока 05 начинается на строке вводного абзаца */
+.grid2,.grid3{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+@media (min-width:850px){
+  #otchety .grid2{
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    grid-template-areas:"number ." "title ." "intro screenshot" "list screenshot" "details screenshot";
+    align-items:start;
+  }
+  #otchety .grid2>div:first-child{display:contents}
+  #otchety .grid2 .num{grid-area:number}
+  #otchety .grid2 h2{grid-area:title}
+  #otchety .grid2 .lead{grid-area:intro}
+  #otchety .grid2 ul{grid-area:list}
+  #otchety .grid2 p:not(.lead){grid-area:details}
+  #otchety .grid2>figure{grid-area:screenshot;align-self:start}
+}
+@media (max-width:849px){
+  #otchety .grid2{grid-template-columns:minmax(0,1fr)}
+  #otchety .grid2>div:first-child{display:block}
+  #otchety .grid2>figure{margin-top:24px!important}
+}
 </style>
 
 <header class="top"><div class="wrap">
   <b>BI · WEB ANALYTICS</b>
   <nav>
     <a href="#istochniki">Источники</a><a href="#komu">Кому подходит</a><a href="#izmeneniya">Изменения</a>
-    <a href="#chat">Чат</a><a href="#otchety">Отчёты</a><a href="#ustroystvo">Как устроено</a>
-    <a href="#razvertyvanie">Развёртывание</a><a href="#plany">Планы</a><a href="#svyaz">Связь</a>
+    <a href="#chat">Чат</a><a href="#otchety">Отчёты</a><a href="#ustroystvo">Технические детали</a>
+    <a href="#razvertyvanie">Развёртывание</a><a href="#svyaz">Связь</a>
   </nav>
 </div></header>
 
@@ -344,7 +365,7 @@ footer{color:var(--muted)}
 <section id="ustroystvo">
   <div class="wrap">
     <span class="num">06</span>
-    <h2>Как устроено</h2>
+    <h2>Технические детали</h2>
     <p class="lead" style="margin-top:14px">Языковая модель только переводит вопрос в&nbsp;запрос к&nbsp;данным. Считает сервер, поэтому число в&nbsp;ответе всегда совпадает с&nbsp;числом в&nbsp;базе.</p>
     <div class="grid2" style="margin-top:28px">
       <div class="flow">
@@ -401,27 +422,10 @@ footer{color:var(--muted)}
   </div>
 </section>
 
-<!-- планы -->
-<section id="plany">
-  <div class="wrap">
-    <span class="num">08</span>
-    <h2>В&nbsp;планах</h2>
-    <p class="lead" style="margin-top:14px">Чего пока нет в&nbsp;первой версии, но&nbsp;что мы собираемся добавить.</p>
-    <div class="plans">
-      <div><b>Уведомления и&nbsp;рассылки</b><small>сводка изменений в&nbsp;Telegram или на&nbsp;почту</small></div>
-      <div><b>Рекламные источники</b><small>Яндекс Директ</small></div>
-      <div><b>Google Analytics 4</b><small>поведение посетителей из&nbsp;Google</small></div>
-      <div><b>Данные конкурентов</b><small>видимость рядом с&nbsp;вашей</small></div>
-      <div><b>Прогнозирование</b><small>ожидаемый уровень показателей</small></div>
-    </div>
-    <p style="margin-top:18px">Порядок зависит от&nbsp;запросов клиентов: то, что нужно вашей команде, можно сделать раньше в&nbsp;рамках доработки.</p>
-  </div>
-</section>
-
 <!-- связь -->
 <section id="svyaz" class="final">
   <div class="wrap">
-    <span class="num">09</span>
+    <span class="num">08</span>
     <h2>Собрать аналитику вокруг решения?</h2>
     <p class="lead" style="margin-top:14px">Покажу, как система ляжет на&nbsp;задачи вашей команды и&nbsp;данные конкретного сайта.</p>
     <div class="btns">
