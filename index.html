@@ -127,6 +127,8 @@ svg.chart{width:100%;height:auto;display:block}
 .plans b{display:block;margin-bottom:4px}
 .plans small{color:var(--muted)}
 footer{padding-block:28px;font-size:13px;color:var(--muted)}
+.shot{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:6px;box-shadow:var(--shadow);background:#fff}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:28px}
 .final{text-align:center}.final .btns{justify-content:center}.final .lead{margin-inline:auto}
 </style>
 
@@ -153,25 +155,7 @@ footer{padding-block:28px;font-size:13px;color:var(--muted)}
       </div>
       <div class="facts"><span>данные на&nbsp;вашем сервере</span><span>обновление каждый день</span><span>история дольше 16&nbsp;месяцев</span></div>
     </div>
-    <figure style="margin:0">
-      <div class="mock">
-        <div class="mock-bar"><i></i><i></i><i></i><span>Обзор проекта · сентябрь 2026</span></div>
-        <div class="mock-body">
-          <div class="fresh"><span>GSC: 30 сен</span><span>Метрика: 1 окт</span><span class="old">Вебмастер: 28 сен</span></div>
-          <div class="kpis">
-            <div class="kpi"><small>Клики Google</small><b>48 210</b> <em class="up">+6,2&nbsp;%</em></div>
-            <div class="kpi"><small>Визиты, живые</small><b>131 905</b> <em class="down">−3,1&nbsp;%</em></div>
-            <div class="kpi"><small>Страниц в поиске</small><b>12 480</b> <em class="up">+1,4&nbsp;%</em></div>
-          </div>
-          <svg class="chart" viewBox="0 0 320 90" aria-hidden="true">
-            <polyline fill="none" stroke="var(--c1)" stroke-width="2" points="0,60 20,55 40,58 60,50 80,52 100,46 120,48 140,40 160,44 180,38 200,41 220,35 240,37 260,30 280,33 300,28 320,26"/>
-            <polyline fill="none" stroke="var(--c2)" stroke-width="2" points="0,40 20,42 40,38 60,41 80,39 100,43 120,40 140,44 160,42 180,47 200,58 220,62 240,60 260,59 280,57 300,58 320,56"/>
-          </svg>
-          <div class="change"><div><b>Визиты из Яндекса: −14&nbsp;%</b><small>с 9 сентября, смена уровня · раздел /articles/</small></div></div>
-        </div>
-      </div>
-      <figcaption class="mock-cap">Макет интерфейса, числа условные</figcaption>
-    </figure>
+    <figure style="margin:0"><img class="shot" src="landing-img/02-google-itogi.png" alt="Панель «Google — итоги»: клики, показы, CTR, средняя позиция" loading="lazy"><figcaption class="mock-cap">Демо-версия: данные настоящего сайта научного издательства</figcaption></figure>
   </div>
 </section>
 
@@ -203,6 +187,12 @@ footer{padding-block:28px;font-size:13px;color:var(--muted)}
         <p class="note">Поведение читается отдельно от&nbsp;поисковых кликов и&nbsp;показов.</p>
       </div>
     </div>
+    <div class="gallery">
+      <img class="shot" src="landing-img/04-google-po-dnyam.png" alt="Клики и показы в Google по дням" loading="lazy">
+      <img class="shot" src="landing-img/05-yandex-sostoyanie.png" alt="Яндекс — состояние сайта" loading="lazy">
+      <img class="shot" src="landing-img/06-metrika-auditoriya.png" alt="Метрика — аудитория" loading="lazy">
+    </div>
+    <p class="mock-cap">Панели демо-версии</p>
   </div>
 </section>
 
@@ -231,17 +221,7 @@ footer{padding-block:28px;font-size:13px;color:var(--muted)}
       <p class="lead" style="margin-top:14px">Перед отчётами система показывает, насколько свежи данные каждого источника, и&nbsp;собирает блок «Что изменилось»: резкий рост, просадку, смену уровня.</p>
       <p>Наблюдение отвечает на&nbsp;вопросы «где» и&nbsp;«когда». Причину система не&nbsp;придумывает: её проверяет человек, а&nbsp;система подсказывает, куда смотреть.</p>
     </div>
-    <figure style="margin:0">
-      <div class="mock">
-        <div class="mock-bar"><i></i><i></i><i></i><span>Что изменилось · последние 28 дней</span></div>
-        <div class="mock-body">
-          <div class="change"><div><b>Визиты из Яндекса: −14&nbsp;%</b><small>смена уровня с 9 сентября · раздел /articles/ · Метрика</small></div></div>
-          <div class="change pos"><div><b>Показы Google: +22&nbsp;%</b><small>резкий рост 17–19 сентября · запросы о&nbsp;вакцинации · GSC</small></div></div>
-          <div class="change"><div><b>Страниц в&nbsp;поиске Яндекса: −310</b><small>просадка 24 сентября · Вебмастер</small></div></div>
-        </div>
-      </div>
-      <figcaption class="mock-cap">Макет интерфейса, числа условные</figcaption>
-    </figure>
+    <figure style="margin:0"><img class="shot" src="landing-img/01-chto-izmenilos.png" alt="Блок «Что изменилось» с наблюдениями" loading="lazy"><figcaption class="mock-cap">Демо-версия, блок «Что изменилось»</figcaption></figure>
   </div>
 </section>
 
